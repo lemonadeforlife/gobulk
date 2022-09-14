@@ -3,3 +3,6 @@ test.txt
 sample.txt
 sample*.txt
 test*.txt
+*.json
+.pyc
+__pycache__

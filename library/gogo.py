@@ -104,14 +104,14 @@ class gogoanime():
         Created a request session so that we can login and access the gogoanime download
         """
         with requests.Session() as s:
-            headers = {'user-agent': headers_value}
+            headers = {'user-agent': login.headers}
             login_url = 'https://gogoanime.tel/login.html'
             c_token = s.get(login_url, headers=headers)
             soup = BeautifulSoup(c_token.content, 'lxml')
             meta = soup.find('meta', attrs={'name': "csrf-token"})
             key = meta['content']
             payload = {
-                '_csrf': key, 'email': email, 'password': password}
+                '_csrf': key, 'email': login.email, 'password': login.password}
             les_go = s.post(login_url, data=payload, headers=headers)
             count = 0
             if self.start_ep == None:

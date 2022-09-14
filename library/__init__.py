@@ -1,6 +1,6 @@
 from .gogo import gogoanime
-from .command import *
-from pathlib import Path
-from ..downime import email, password, headers_value
+from .command import custom_command, exclude_command
 from .dm import *
+from .login import login
+from pathlib import Path
 home = str(Path.home())

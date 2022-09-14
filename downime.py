@@ -1,16 +1,9 @@
 #! /usr/bin/python3
 import re
-import json
 import sys
 from pathlib import Path
 from library import *
 
-# Enter your token.json location here
-with open(f'token.json', 'r') as f:
-    data = json.load(f)
-    email = data['email']
-    password = data['password']
-    headers_value = data['user-agent']
 
 res_patrn = re.compile(r'(\d{3,4}|\d{3,4}x\d{3,4})')
 res_cus_ep = re.compile(r'\d*:\d*|\d')
@@ -32,6 +25,7 @@ if __name__ == '__main__':
                     start, end = custom_command(sys.argv)
                 elif res_exclude.match(sys.argv[x]):
                     exclude = exclude_command(sys.argv[x])
+            login('E:\Documents\key.json')
             gogoanime(sys.argv[1], Quality, start, end, exclude).parse()
     except KeyboardInterrupt:
         print('\n \n \nOperation Cancelled')
