@@ -2,14 +2,14 @@
 Gets your favorite anime all episode download link from [gogoanime](https://gogoanime.tel)
 You can batch download from your favorite download manager.
 
-* [Setup](https://github.com/lemonadeforlife/gobulk/main/README.md#setup)
-  * [Install Requiremnets file](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#install-python-requirements-file)
-  * [token.json](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#enter-your-gogoanime-account-in-tokenjson-file)
+* [Setup](https://github.com/lemonadeforlife/gobulk_personal/main/README.md#setup)
+  * [Install Requiremnets file](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#install-python-requirements-file)
+  * [token.json](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#enter-your-gogoanime-account-in-tokenjson-file)
 	
-* [Usage](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#usage)
-  * [Command Formats](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#command-formats)
-  * [Search & Download](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#search--download)
-  * [Access File From Anywhere(For linux User)](https://github.com/lemonadeforlife/gobulk/blob/main/README.md#access-file-from-anywherefor-linux-user)
+* [Usage](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#usage)
+  * [Command Formats](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#command-formats)
+  * [Search & Download](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#search--download)
+  * [Access File From Anywhere(For linux User)](https://github.com/lemonadeforlife/gobulk_personal/blob/main/README.md#access-file-from-anywherefor-linux-user)
 <br>
 <br>
 <br>
