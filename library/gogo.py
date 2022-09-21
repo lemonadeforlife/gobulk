@@ -90,16 +90,15 @@ class gogoanime():
         else:
             return anime_name
 
-    def write_url(self, key: str, email: str, password: str, user_agent, url, ep, type='w'):
+    def write_url(self, user_agent, url, ep, type='w'):
         if type == 'w':
             link = url
         else:
             link = '\n'+url
-        payload = f"_csrf={key}&email={email.replace('@','%40')}&password={password}"
         with open(f'{home}/Desktop/{self.anime_info(name=True)}.txt', f'{type}') as f:
             f.write(link)
         download_manager(
-            payload, user_agent, url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
+            user_agent, url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
         print(
             f'{self.anime_info(name=True)} [EP:{ep}]-> Url has been written successfully')
 
@@ -148,11 +147,11 @@ class gogoanime():
                             if self.quality in link.text.strip():
                                 if count == 0:
                                     self.write_url(
-                                        payload['_csrf'], payload['email'], payload['password'], headers['user-agent'], link['href'], x)
+                                        headers['user-agent'], link['href'], x)
                                     count += 1
                                 else:
                                     self.write_url(
-                                        payload['_csrf'], payload['email'], payload['password'], headers['user-agent'], link['href'], x, 'a')
+                                        headers['user-agent'], link['href'], x, 'a')
                                     count += 1
                                 Found = True
                                 break

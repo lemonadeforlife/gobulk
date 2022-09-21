@@ -3,8 +3,7 @@ import os
 
 
 class download_manager():
-    def __init__(self, payload: str, user_agent: str, link: str, directory: str = None, filename: str = None, category_index: int = None):
-        self.payload = payload
+    def __init__(self, user_agent: str, link: str, directory: str = None, filename: str = None, category_index: int = None):
         self.userAgent = user_agent
         self.link = link
         if directory == None:
@@ -23,7 +22,7 @@ class download_manager():
     @property
     def uGet(self):
         """uGet Download Manager For Linux Only"""
-        command = f'nohup uget-gtk --http-post-data="{self.payload}" --http-user-agent="{self.userAgent}" --category-index={self.category} --quiet{self.folder}{self.filename}"{self.link}" > /dev/null 2>&1 &'
+        command = f'nohup uget-gtk --http-user-agent="{self.userAgent}" --category-index={self.category} --quiet{self.folder}{self.filename}"{self.link}" > /dev/null 2>&1 &'
         os.system(command)
 
     @property

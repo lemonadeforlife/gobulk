@@ -17,7 +17,7 @@ def custom_command(com):
     else:
         try:
             start_ep = int(com)
-            end_ep = int(com) + 1
+            end_ep = int(com)
         except Exception:
             print(f'{com} is invalid')
             exit()
