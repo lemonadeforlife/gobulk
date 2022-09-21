@@ -1,16 +1,23 @@
+import os
+import sys
 import requests
 from bs4 import BeautifulSoup
 import re
-from library import *
+from pathlib import Path
+from library.login import login
+from library.command import custom_command, exclude_command
+from library.dm import download_manager
+home = str(Path.home())
 
 
 class gogoanime():
-    def __init__(self, link: str, quality: str, start_ep: int = None, end_ep: int = None, exclude_episode: set = None):
+    def __init__(self, cred_path: str, link: str, quality: str, start_ep: int = None, end_ep: int = None, exclude_episode: set = None):
         self.link = link
         self.quality = quality
         self.start_ep = start_ep
         self.end_ep = end_ep
         self.exclude_episode = exclude_episode
+        self.cred_path = cred_path
 
     def check_url(self):
         gogo_patrn = re.compile(
@@ -83,15 +90,16 @@ class gogoanime():
         else:
             return anime_name
 
-    def write_url(self, url, ep, type='w'):
+    def write_url(self, key: str, email: str, password: str, user_agent, url, ep, type='w'):
         if type == 'w':
             link = url
         else:
             link = '\n'+url
+        payload = f"_csrf={key}&email={email.replace('@','%40')}&password={password}"
         with open(f'{home}/Desktop/{self.anime_info(name=True)}.txt', f'{type}') as f:
             f.write(link)
         download_manager(
-            url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2)
+            payload, user_agent, url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
         print(
             f'{self.anime_info(name=True)} [EP:{ep}]-> Url has been written successfully')
 
@@ -104,14 +112,14 @@ class gogoanime():
         Created a request session so that we can login and access the gogoanime download
         """
         with requests.Session() as s:
-            headers = {'user-agent': login.headers}
+            headers = {'user-agent': login(self.cred_path).headers}
             login_url = 'https://gogoanime.tel/login.html'
             c_token = s.get(login_url, headers=headers)
             soup = BeautifulSoup(c_token.content, 'lxml')
             meta = soup.find('meta', attrs={'name': "csrf-token"})
             key = meta['content']
             payload = {
-                '_csrf': key, 'email': login.email, 'password': login.password}
+                '_csrf': key, 'email': login(self.cred_path).email, 'password': login(self.cred_path).password}
             les_go = s.post(login_url, data=payload, headers=headers)
             count = 0
             if self.start_ep == None:
@@ -139,10 +147,12 @@ class gogoanime():
                             lis_res += link.text.strip() + '\n'
                             if self.quality in link.text.strip():
                                 if count == 0:
-                                    self.write_url(link['href'], x)
+                                    self.write_url(
+                                        payload['_csrf'], payload['email'], payload['password'], headers['user-agent'], link['href'], x)
                                     count += 1
                                 else:
-                                    self.write_url(link['href'], x, 'a')
+                                    self.write_url(
+                                        payload['_csrf'], payload['email'], payload['password'], headers['user-agent'], link['href'], x, 'a')
                                     count += 1
                                 Found = True
                                 break

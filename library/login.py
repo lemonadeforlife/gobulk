@@ -3,37 +3,25 @@ import json
 
 class login():
     """
-    A login class for login
+    login CLASS returns three values:
+    * email    -> return email address
+    * password -> returns password
+    * headers  -> post custom headers to not get rejected from servers
     """
 
-    def __init__(self, location='') -> str:
-        self.location = location
-        with open(f'{location}', 'r') as f:
+    def __init__(self, path: str) -> str:
+        with open(path, 'r') as f:
             data = json.load(f)
-            email = data['email']
-            password = data['password']
-            headers_value = data['user-agent']
-        self.email = email
-        self.password = password
-        self.headers = headers_value
+            self.data = data
 
     @property
-    def email(self) -> str:
-        """
-        returns string value of email from key.json
-        """
-        return self.email
+    def email(self):
+        return self.data['email']
 
     @property
-    def password(self) -> str:
-        """
-        returns string value of password from key.json
-        """
-        return self.password
+    def password(self):
+        return self.data['password']
 
     @property
-    def headers(self) -> str:
-        """
-        returns string value of headers from key.json
-        """
-        return self.headers
+    def headers(self):
+        return self.data['user-agent']

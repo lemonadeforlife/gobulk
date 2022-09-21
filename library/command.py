@@ -1,3 +1,8 @@
+__all__ = ['custom_command', 'exclude_command', 'clear']
+import os
+import sys
+
+
 def custom_command(com):
     if com.find(':') != -1:
         start, end, *ignore = com.split(':')
@@ -36,3 +41,10 @@ def exclude_command(com):
                     print(
                         f'Error::   Exclude Value: {num}\nWhich was ignored and continued')
     return sorted(set(exclude))
+
+
+def clear():
+    if sys.platform == 'linux' or sys.platform == 'darwin':
+        os.system('clear')
+    elif sys.platform == 'win32':
+        os.system('cls')
