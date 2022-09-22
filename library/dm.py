@@ -1,10 +1,10 @@
 import sys
 import os
+import subprocess
 
 
 class download_manager():
-    def __init__(self, user_agent: str, link: str, directory: str = None, filename: str = None, category_index: int = None):
-        self.userAgent = user_agent
+    def __init__(self, link: str, directory: str = None, filename: str = None, category_index: int = None):
         self.link = link
         if directory == None:
             self.folder = ''
@@ -22,7 +22,7 @@ class download_manager():
     @property
     def uGet(self):
         """uGet Download Manager For Linux Only"""
-        command = f'nohup uget-gtk --http-user-agent="{self.userAgent}" --category-index={self.category} --quiet{self.folder}{self.filename}"{self.link}" > /dev/null 2>&1 &'
+        command = f'nohup uget-gtk --category-index={self.category} --quiet{self.folder}{self.filename}"{self.link}" > /dev/null 2>&1 &'
         os.system(command)
 
     @property
@@ -35,7 +35,6 @@ class download_manager():
     @property
     def aria2c(self):
         """
-        In development coming soon...
+        aria2c baby heheboi...
         """
-        # source: https://pypi.org/project/aria2p/
         pass

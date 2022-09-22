@@ -90,15 +90,15 @@ class gogoanime():
         else:
             return anime_name
 
-    def write_url(self, user_agent, url, ep, type='w'):
+    def write_url(self, url, ep, type='w'):
         if type == 'w':
             link = url
         else:
             link = '\n'+url
-        with open(f'{home}/Desktop/{self.anime_info(name=True)}.txt', f'{type}') as f:
+        with open(f'{home}/Documents/gobulk/{self.anime_info(name=True)}.txt', f'{type}') as f:
             f.write(link)
         download_manager(
-            user_agent, url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
+            url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
         print(
             f'{self.anime_info(name=True)} [EP:{ep}]-> Url has been written successfully')
 
@@ -146,12 +146,10 @@ class gogoanime():
                             lis_res += link.text.strip() + '\n'
                             if self.quality in link.text.strip():
                                 if count == 0:
-                                    self.write_url(
-                                        headers['user-agent'], link['href'], x)
+                                    self.write_url(link['href'], x)
                                     count += 1
                                 else:
-                                    self.write_url(
-                                        headers['user-agent'], link['href'], x, 'a')
+                                    self.write_url(link['href'], x, 'a')
                                     count += 1
                                 Found = True
                                 break
