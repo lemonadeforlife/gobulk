@@ -95,10 +95,14 @@ class gogoanime():
             link = url
         else:
             link = '\n'+url
+        try:
+            os.mkdir(f'{home}/Documents/gobulk/')
+        except FileExistsError:
+            pass
         with open(f'{home}/Documents/gobulk/{self.anime_info(name=True)}.txt', f'{type}') as f:
             f.write(link)
         download_manager(
-            url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).uGet
+            url, f'{home}/Videos/Anime/{self.anime_info(True)}', ep, 2).aria2c
         print(
             f'{self.anime_info(name=True)} [EP:{ep}]-> Url has been written successfully')
 
