@@ -47,6 +47,9 @@ class gogoanime():
             name = item.find('p', class_="name").text.strip()
             release_data = item.find('p', class_='released').text.strip()
             print(f'[{index}] Anime Name: {name} | Year: {release_data}')
+        if items == []:
+            print(f"{'*'*5} Couldn't find anything as:[{anime_name}] {'*'*5}")
+            exit()
         choose_anime = input("Which anime do you want to select? ")
         find_link = items[int(choose_anime)].find('a', href=True)
         s_link = 'https://gogoanime.tel'+find_link['href']
