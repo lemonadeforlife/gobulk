@@ -21,6 +21,10 @@ if __name__ == "__main__":
     try:
         if sys.argv[1].lower() == "search":
             gogoanime(check_json(), "", "720").search_anime()
+        elif sys.argv[1].lower() == 'login':
+            check_json()
+            print('Process completed!')
+            exit()
         else:
             for x in range(index_list):
                 if res_patrn.match(sys.argv[x]):

@@ -4,3 +4,6 @@ sample*.*
 .pyc
 __pycache__
 test*.*
+*.gz
+*.zip
+*.tar
