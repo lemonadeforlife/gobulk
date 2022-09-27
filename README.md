@@ -2,16 +2,16 @@
 Gets your favorite anime all episode download link from [gogoanime](https://gogoanime.tel)
 You can batch download from your favorite download manager.
 
-* [Setup](https://github.com/lemonadeforlife/gobulk/README.md#setup)
-  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk/README.md#install-python-requirements-file)
+* [Setup](https://github.com/lemonadeforlife/gobulk#setup)
+  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk#install-python-requirements-file)
 	
-  * [Login](https://github.com/lemonadeforlife/gobulk/README.md#login)
-* [Usage](https://github.com/lemonadeforlife/gobulk/README.md#usage)
-  * [resolution](https://github.com/lemonadeforlife/gobulk/README.md#resolution)
-  * [Custom episode](https://github.com/lemonadeforlife/gobulk/README.md#Custom-episode)
-  * [Exclude episode](https://github.com/lemonadeforlife/gobulk/README.md#Exclude-episode)
-  * [Command Formats](https://github.com/lemonadeforlife/gobulk/README.md#command-formats)
-  * [Search & Download](https://github.com/lemonadeforlife/gobulk/README.md#search--download)
+  * [Login](https://github.com/lemonadeforlife/gobulk#login)
+* [Usage](https://github.com/lemonadeforlife/gobulk#usage)
+  * [resolution](https://github.com/lemonadeforlife/gobulk#resolution)
+  * [Custom episode](https://github.com/lemonadeforlife/gobulk#Custom-episode)
+  * [Exclude episode](https://github.com/lemonadeforlife/gobulk#Exclude-episode)
+  * [Command Formats](https://github.com/lemonadeforlife/gobulk#command-formats)
+  * [Search & Download](https://github.com/lemonadeforlife/gobulk#search--download)
 
 <br>
 
