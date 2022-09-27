@@ -6,3 +6,4 @@ cd gobulk && ln -s downime.py gobulk
 mv gobulk ~/.local/bin
 clear
 echo Installation complete!
+gobulk login
