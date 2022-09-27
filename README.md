@@ -1,7 +1,7 @@
 # gobulk ⏬
 Gets your favorite anime all episode download link from [gogoanime](https://gogoanime.tel)
 You can batch download from your favorite download manager like aria2c or uGet.
-It exports download link txt in documents folder for other download manager.
+It exports download link txt format in documents folder for other download manager. So that you can import and bulk download your favorite anime.
 
 * [Setup](https://github.com/lemonadeforlife/gobulk#setup)
   * [Install requiremets file](https://github.com/lemonadeforlife/gobulk#install-python-requirements-file)
