@@ -24,7 +24,7 @@ It exports download link txt format in documents folder for other download manag
 
 ## Setup
 #### Install:
-Download install.sh from [release](https://github.com/lemonadeforlife/gobulk/releases/tag/Linux)
+Download install.sh from [release](https://github.com/lemonadeforlife/gobulk/releases/tag/Linux) and run:
 ```bash
 chmod +x install.sh && ./install.sh
 ```
