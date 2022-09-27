@@ -4,7 +4,7 @@ You can batch download from your favorite download manager like aria2c or uGet.
 It exports download link txt format in documents folder for other download manager. So that you can import and bulk download your favorite anime.
 
 * [Setup](https://github.com/lemonadeforlife/gobulk#setup)
-  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk#install-python-requirements-file)
+  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk#install)
 	
   * [Login](https://github.com/lemonadeforlife/gobulk#login)
 * [Usage](https://github.com/lemonadeforlife/gobulk#usage)
@@ -23,9 +23,10 @@ It exports download link txt format in documents folder for other download manag
 <br>
 
 ## Setup
-#### Install python requirements file:
-```
-python3 -m pip install -r requirements.txt
+#### Install:
+Download install.sh from [release](https://github.com/lemonadeforlife/gobulk/releases/tag/Linux)
+```bash
+chmod +x install.sh && ./install.sh
 ```
 Don't worry I didn't use any selenium. Only requests and Beautifulsoup <br/>Tested on python3.8 & python3.10<br/>
 #### Login
