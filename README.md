@@ -2,16 +2,16 @@
 Gets your favorite anime all episode download link from [gogoanime](https://gogoanime.tel)
 You can batch download from your favorite download manager.
 
-* [Setup](https://github.com/lemonadeforlife/gobulk/main/README.md#setup)
-  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk/main/README.md#install-python-requirements-file)
+* [Setup](https://github.com/lemonadeforlife/gobulk/README.md#setup)
+  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk/README.md#install-python-requirements-file)
 	
-  * [Login](https://github.com/lemonadeforlife/gobulk/main/README.md#login)
-* [Usage](https://github.com/lemonadeforlife/gobulk/main/README.md#usage)
-  * [resolution](https://github.com/lemonadeforlife/gobulk/main/README.md#resolution)
-  * [Custom episode](https://github.com/lemonadeforlife/gobulk/main/README.md#Custom-episode)
-  * [Exclude episode](https://github.com/lemonadeforlife/gobulk/main/README.md#Exclude-episode)
-  * [Command Formats](https://github.com/lemonadeforlife/gobulk/main/README.md#command-formats)
-  * [Search & Download](https://github.com/lemonadeforlife/gobulk/main/README.md#search--download)
+  * [Login](https://github.com/lemonadeforlife/gobulk/README.md#login)
+* [Usage](https://github.com/lemonadeforlife/gobulk/README.md#usage)
+  * [resolution](https://github.com/lemonadeforlife/gobulk/README.md#resolution)
+  * [Custom episode](https://github.com/lemonadeforlife/gobulk/README.md#Custom-episode)
+  * [Exclude episode](https://github.com/lemonadeforlife/gobulk/README.md#Exclude-episode)
+  * [Command Formats](https://github.com/lemonadeforlife/gobulk/README.md#command-formats)
+  * [Search & Download](https://github.com/lemonadeforlife/gobulk/README.md#search--download)
 
 <br>
 
@@ -29,7 +29,7 @@ python3 -m pip install -r requirements.txt
 Don't worry I didn't use any selenium. Only requests and Beautifulsoup <br/>Tested on python3.8 & python3.10<br/>
 #### Login
 If you don't have gogoanime account then [create](https://gogoanime.tel/login.html) one. Because now gogoanime gives download access only if we log in.<br>
-![](https://github.com/lemonadeforlife/gobulk/main/img/gogoanime_list_download.png "gogoanime download options at login") <br/><br/>
+![](https://github.com/lemonadeforlife/gobulk/blob/52b859b31e34ab2354b8569c7d337c02d637bce1/img/gogoanime_list_download.png "gogoanime download options at login") <br/><br/>
 
 Get your user-agent from [here](https://www.whatismybrowser.com/detect/what-is-my-user-agent/)<br>
 Because even though you have entered the correct email and password<br>The server will reject and return **403**.<br>Because gogoanime doesn't accept bot requests so we are using custom headers and pretending like a browser.
