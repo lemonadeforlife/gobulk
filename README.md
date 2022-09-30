@@ -162,10 +162,3 @@ gobulk search
 
 * To exclude multiple episode or multiple range or both use coma as well but this time it doesn't need add at end.<br>
 	example: `2,3,5` or `1-5,10-15` or `1-5,9,11,20-13`
-
-
-
-**Example:**
-```
-gobulk https://gogoanime.tel/category/3-gatsu-no-lion 1080
-```
