@@ -4,7 +4,7 @@ You can batch download from your favorite download manager like aria2c or uGet.
 It exports download link txt format in documents folder for other download manager. So that you can import and bulk download your favorite anime.
 
 * [Setup](https://github.com/lemonadeforlife/gobulk#setup)
-  * [Install requiremets file](https://github.com/lemonadeforlife/gobulk#install)
+  * [Install](https://github.com/lemonadeforlife/gobulk#install)
 	
   * [Login](https://github.com/lemonadeforlife/gobulk#login)
 * [Usage](https://github.com/lemonadeforlife/gobulk#usage)
@@ -16,7 +16,7 @@ It exports download link txt format in documents folder for other download manag
 
 <br>
 
-#### OS:
+#### Supported Platform:
 * Linux <br> Tested on Linux Mint 21 vanessa & Ubuntu 22.04 jammy
 
 <br>
@@ -24,7 +24,7 @@ It exports download link txt format in documents folder for other download manag
 
 ## Setup
 #### Install:
-Download install.sh from [release](https://github.com/lemonadeforlife/gobulk/releases/tag/Linux) and run:
+create `install.sh` file and copy paste this [lines](https://github.com/lemonadeforlife/gobulk/releases/tag/Linux) and run:
 ```bash
 chmod +x install.sh && ./install.sh
 ```
