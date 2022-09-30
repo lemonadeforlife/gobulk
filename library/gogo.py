@@ -167,4 +167,4 @@ class gogoanime():
                             self.quality = input('Resolution$ ')
         print(f"""All Download Links were successfully written
 File Saved as: {self.anime_info(name=True)}.txt
-Directory: {home}/Desktop""")
+Directory: {home}/Documents""")
